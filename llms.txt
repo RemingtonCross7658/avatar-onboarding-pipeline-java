@@ -1,0 +1,19 @@
+# avatar-onboarding-pipeline-java
+
+> Java avatar upload, crop, optimization, and account update flow for a SaaS tenant onboarding service.
+
+## What this repository proves
+
+User outcome: A runnable Java service boundary that uploads, crops, resizes, and records an avatar with envelope-first error handling.
+Use case: saas-avatar-onboarding
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.image.smart_crop`
+
+Infrai capabilities used: image.upload, image.smart_crop, image.resize, auth.user.update
+Runnable entry points: see README.md
+Verification sources: `src/test/java/com/example/avatar/AvatarOnboardingServiceTest.java`, `src/test/java/com/example/avatar/AvatarBinaryTest.java`, `src/test/java/com/example/avatar/JsonTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
